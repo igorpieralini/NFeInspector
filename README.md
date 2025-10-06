@@ -1,32 +1,34 @@
-# 🧾 NFeInsight
+# 🧾 NFeInspector v1.0.0-SNAPSHOT
 
-NFeInsight is a modern, object-oriented Java application that reads and parses Brazilian Electronic Invoices (NF-e) in XML format. It extracts structured data such as the emitter, recipient, and product items, then displays the results on the console in a readable format.
+**NFeInspector** is a modern, object-oriented Java application that reads and parses **Brazilian Electronic Invoices (NF-e)** in XML format. It extracts structured data such as the emitter, recipient, and product items, displaying the results in a clear and readable format on the console.
+
+Ideal for developers looking to automate NF-e reading and integrate with CSV/JSON export or database persistence.
 
 ---
 
 ## 🚀 Features
 
 * ✅ Reads and parses NF-e XML files
-* ✅ Extracts emitter, recipient, and product items
+* ✅ Extracts **emitter**, **recipient**, and **product items** information
 * ✅ Maps XML data into Java model objects
-* ✅ Built with clean OOP design
-* ✅ Easily extensible for CSV / JSON export or database persistence
+* ✅ Clean and modular OOP architecture
+* ✅ Easily extendable for **CSV/JSON export** or database integration
 
 ---
 
-## 🛠️ Technologies
+## 🛠️ Technologies Used
 
-| Technology        | Notes                                  |
-|-------------------| -------------------------------------- |
+| Technology        | Description                            |
+| ----------------- | -------------------------------------- |
 | ☕ Java 25         | Project target version                 |
-| 🧩 Maven          | Build and dependency management        |
+| 🧩 Maven          | Dependency management and build tool   |
 | 📂 JDOM2          | XML parsing library                    |
-| 🧱 SLF4J (simple) | Logging                                |
-| 🧠 OOP            | Encapsulation, modularity, readability |
+| 🧱 SLF4J (Simple) | Lightweight logging                    |
+| 🧠 OOP            | Encapsulation, modularity, and clarity |
 
 ---
 
-## 📦 Project Layout
+## 📦 Project Structure
 
 ```
 NFeInsight/
@@ -35,88 +37,55 @@ NFeInsight/
  │   ├── main/
  │   │   ├── java/com/nfeinsight/
  │   │   │   ├── app/Main.java
- │   │   │   ├── model/
- │   │   │   ├── parser/
- │   │   │   └── service/
- │   │   └── resources/example.xml
- │   └── test/
-```
-
----
-
-## ⚙️ How it works
-
-1. The app loads an NF-e XML file.
-2. It parses key elements (emit, dest, det/prod).
-3. Parsed values are mapped into model objects (`Invoice`, `Emitter`, `Recipient`, `Product`).
-4. The app prints a formatted representation to the console.
-
----
-
-## 🧠 Example output
-
-```
-Emitter: Example Company LTD (30290856000186)
-Recipient: Example Client (12345678909)
-Products:
- - 001 - Example Product | $100.0
+ │   │   │   ├── model/       # Model classes (Emitter, Recipient, ProductItem, etc.)
+ │   │   │   ├── parser/      # XML parsing logic
+ │   │   │   └── service/     # Helper services and business rules
+ │   │   └── resources/
+ │   │       └── example.xml  # Sample NF-e
+ │   └── test/                # Unit tests
 ```
 
 ---
 
 ## 🧑‍💻 Developer Guide
 
-**Clone**
+### Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/NFeInsight.git
 cd NFeInsight
 ```
 
-**Build**
+### Build
 
 ```bash
 mvn clean install
 ```
 
-**Run**
+### Run
 
 ```bash
 mvn exec:java -Dexec.mainClass="com.nfeinsight.app.Main"
 ```
 
-**Use your own XML**
+### Use your own XML files
 
-Place `.xml` files in `src/main/resources/` and adjust the path in `Main.java` if necessary.
-
----
-
-## 🌟 Roadmap
-
-* Export to CSV/JSON/database
-* Batch processing for multiple invoices
-* XSD validation against SEFAZ schemas
-* REST API and simple web UI
+1. Place your `.xml` files in `src/main/resources/`.
+2. Adjust the path in `Main.java` if necessary.
 
 ---
 
-## 🤝 Contributing
+## 📌 Next Steps / Extensions
 
-Pull requests and issues are welcome. Keep changes small and add tests when relevant.
-
----
-
-## ❤️ Credits
-
-Built with Java 25, Maven, JDOM2, and a passion for clean code.
+* Export data to **CSV or JSON**
+* Database persistence
+* GUI or REST API integration
+* Support for multiple types of fiscal documents
 
 ---
 
-## 🎉 Final Notes for Developers
+### Developer
 
-* Keep models immutable where it makes sense.
-* Favor small classes and single responsibilities.
-* Add unit tests for the parser to cover variations of NF-e XML structures.
-* Use Java records if you prefer more concise immutable data holders.
-
-Happy coding! 🚀
+**Igor Pieralini** – Creator and maintainer of the project
+📧 Contact: [[igorpieralini@gmail.com](mailto:your-email@example.com)]
+🌐 GitHub: [https://github.com/igorpieralini](https://github.com/igorpieralini)
