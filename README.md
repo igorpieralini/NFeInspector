@@ -1,4 +1,4 @@
-# 🧾 NFeInspector v1.0.0-SNAPSHOT
+# 🧾 NFeInspector v1.0.0
 
 **NFeInspector** is a modern, object-oriented Java application that reads and parses **Brazilian Electronic Invoices (NF-e)** in XML format. It extracts structured data such as the emitter, recipient, and product items, displaying the results in a clear and readable format on the console.
 
